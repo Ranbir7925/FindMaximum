@@ -14,23 +14,30 @@ public class TestMaximumVariable
    }
 
     @Test
-    public void givenMaximumNumberAt_FirstPosition_ShouldReturnSameNumber()
+    public void givenMaximumIntegerValueAt_FirstPosition_ShouldReturnSameNumber()
     {
-        Integer maximum = maximumVariable.maximumValue(99,55,44);
+        Integer maximum = maximumVariable.maximumIntegerValue(99,55,44);
         Assert.assertEquals((Integer)99,maximum);
     }
 
     @Test
-    public void givenMaximumNumberAt_SecondPosition_ShouldReturnSameNumber()
+    public void givenMaximumIntegerValueAt_SecondPosition_ShouldReturnSameNumber()
     {
-        Integer maximum = maximumVariable.maximumValue(55,99,69);
+        Integer maximum = maximumVariable.maximumIntegerValue(55,99,69);
         Assert.assertEquals((Integer)99,maximum);
     }
 
     @Test
-    public void givenMaximumNumberAt_ThirdPosition_ShouldReturnSameNumber()
+    public void givenMaximumIntegerValueAt_ThirdPosition_ShouldReturnSameNumber()
     {
-        Integer maximum = maximumVariable.maximumValue(55,69,99);
+        Integer maximum = maximumVariable.maximumIntegerValue(55,69,99);
         Assert.assertEquals((Integer) 99,maximum);
+    }
+
+    @Test
+    public void givenMaximumFloatValueAt_FirstPosition_ShouldReturnSameNumber()
+    {
+        Float maximum = maximumVariable.maximumFloatValue(8.8f,4.5f,9.1f);
+        Assert.assertEquals((Float)9.1f,maximum);
     }
 }
