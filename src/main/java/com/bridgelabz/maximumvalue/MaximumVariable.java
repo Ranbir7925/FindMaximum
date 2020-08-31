@@ -31,7 +31,12 @@ public class MaximumVariable < E extends Comparable<E> >
     public static < E extends Comparable > E maximumValue(List<E> values)
     {
         Optional<E> maximum = values.stream().max(Comparable::compareTo);
+        printMaximumValue(values, maximum.get());
         return maximum.get();
+    }
+    public static <E> void printMaximumValue(List<E> values ,E max)
+    {
+        System.out.println("Maximum value out of "+values+" is "+max);
     }
 
 
