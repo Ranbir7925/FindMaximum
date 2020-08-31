@@ -35,4 +35,20 @@ public class MaximumVariable
         else
             return thirdNUmber;
     }
+    /**
+     *
+     * @param firstString takes 1st String Value
+     * @param secondString takes 2nd String Value
+     * @param thirdString takes 3rd String Value
+     * @return maximum String value
+     */
+    public String maximumStringValue(String firstString, String secondString, String thirdString)
+    {
+        if (firstString.compareTo(secondString) > 0 && firstString.compareTo(thirdString) > 0)
+            return firstString;
+        else if (secondString.compareTo(thirdString) > 0 && secondString.compareTo(firstString) > 0)
+            return secondString;
+        else
+            return thirdString;
+    }
 }
