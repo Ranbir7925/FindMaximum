@@ -2,7 +2,6 @@ package com.bridgelabz.findmaximum;
 
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class TestMaximumVariable
@@ -20,4 +19,12 @@ public class TestMaximumVariable
         Integer maximum = maximumVariable.maximumValue(99,55,44);
         Assert.assertEquals((Integer)99,maximum);
     }
+
+    @Test
+    public void givenMaximumNumberAt_SecondPosition_ShouldReturnSameNumber()
+    {
+        Integer maximum = maximumVariable.maximumValue(55,99,69);
+        Assert.assertEquals((Integer)99,maximum);
+    }
+
 }
